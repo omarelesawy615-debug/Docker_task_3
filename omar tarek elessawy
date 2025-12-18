@@ -1,0 +1,6 @@
+docker build -t my_image .
+docker images
+docker run -d --name my_container -v "$(pwd):/app" my_image
+docker ps
+docker exec -it my_container bash
+docker stop my_container && docker rm my_container
